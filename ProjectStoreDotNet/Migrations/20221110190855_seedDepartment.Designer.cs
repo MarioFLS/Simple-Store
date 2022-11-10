@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectStoreDotNet.Repository;
 
@@ -11,9 +12,11 @@ using ProjectStoreDotNet.Repository;
 namespace ProjectStoreDotNet.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    partial class StoreContextModelSnapshot : ModelSnapshot
+    [Migration("20221110190855_seedDepartment")]
+    partial class seedDepartment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,62 +96,6 @@ namespace ProjectStoreDotNet.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Sellers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BaseSalary = 1000.0m,
-                            BirthDate = new DateTime(1998, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 1,
-                            Email = "bob@gmail.com",
-                            Name = "Bob Brown"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BaseSalary = 3500.0m,
-                            BirthDate = new DateTime(1979, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 1,
-                            Email = "maria@gmail.com",
-                            Name = "Maria Green"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BaseSalary = 2200.0m,
-                            BirthDate = new DateTime(1988, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 3,
-                            Email = "alex@gmail.com",
-                            Name = "Alex Grey"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BaseSalary = 3000.0m,
-                            BirthDate = new DateTime(1993, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 4,
-                            Email = "martha@gmail.com",
-                            Name = "Martha Red"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BaseSalary = 4000.0m,
-                            BirthDate = new DateTime(2000, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 3,
-                            Email = "donald@gmail.com",
-                            Name = "Donald Blue"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BaseSalary = 3000.0m,
-                            BirthDate = new DateTime(1997, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DepartmentId = 2,
-                            Email = "bob@gmail.com",
-                            Name = "Alex Pink"
-                        });
                 });
 
             modelBuilder.Entity("ProjectStoreDotNet.Models.Seller", b =>
