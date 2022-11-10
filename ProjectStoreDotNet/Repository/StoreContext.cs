@@ -5,8 +5,8 @@ namespace ProjectStoreDotNet.Repository
 {
     public class StoreContext : DbContext, IStoreContext
     {
-
-        //public StoreContext(DbContextOptions options) : base(options) { }
+        public StoreContext() { }
+        public StoreContext(DbContextOptions<StoreContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

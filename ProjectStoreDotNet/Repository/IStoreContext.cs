@@ -7,5 +7,6 @@ namespace ProjectStoreDotNet.Repository
     {
         public DbSet<Department> Departments { get; set; }
         public DbSet<Seller> Sellers { get; set; }
+        public int SaveChanges();
     }
 }
