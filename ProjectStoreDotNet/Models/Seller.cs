@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectStoreDotNet.Models
@@ -11,13 +12,15 @@ namespace ProjectStoreDotNet.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Column("birth_date")]
-        [DisplayFormat(DataFormatString = "{dd/MM/yyyy}")]
+        [Column("Birth_Date")]
         public DateTime BirthDate { get; set; }
 
-        [Column("base_salary", TypeName = "decimal(6,2)")]
+        [DefaultValue(1000)]
+        [Column("Base_Salary", TypeName = "decimal(6,2)")]
         public decimal BaseSalary { get; set; }
 
+        [Column("Department_Id")]
+        [DefaultValue(1)]
         [ForeignKey("DepartmentId")]
         public int DepartmentId { get; set; }
 
