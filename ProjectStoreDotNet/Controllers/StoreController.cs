@@ -111,7 +111,7 @@ namespace ProjectStoreDotNet.Controllers
         }
 
         /// <summary>
-        /// Deelta o vendedor pelo ID
+        /// Deleta o vendedor pelo ID
         /// </summary>
         /// <param name="id">Id do Vendedor</param>
         /// <returns>Não Possui Retorno</returns>
