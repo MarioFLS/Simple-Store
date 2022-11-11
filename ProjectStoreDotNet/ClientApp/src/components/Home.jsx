@@ -14,7 +14,7 @@ export const Home = () => {
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
+      fontSize: "clamp(0.6em, 1em, 1.5em)",
     },
   }));
 
@@ -27,9 +27,6 @@ export const Home = () => {
       border: 0,
     },
   }));
-
-
-
 
   const getDepartaments = async () => {
     const response = await fetch('department');
@@ -47,12 +44,11 @@ export const Home = () => {
     (async () => { await getDepartaments(); await getSellers() })();
   }, [])
 
-  //console.log(sellers)
   return (
     <Container component="main">
-      <h1>Lista de Vendedores</h1>
+      <h1 align="center">Lista de Vendedores</h1>
 
-      <Box>
+      <Box sx={{ marginTop: "20px" }}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
@@ -70,7 +66,6 @@ export const Home = () => {
                   <StyledTableCell component="th" scope="row">
                     {row.name}
                   </StyledTableCell>
-                  {console.log()}
                   <StyledTableCell align="center">{row.email}</StyledTableCell>
                   <StyledTableCell align="center">R$ {row.baseSalary.toFixed(2)}</StyledTableCell>
                   <StyledTableCell align="center">{formatDate(row.birthDate)}</StyledTableCell>
