@@ -18,7 +18,6 @@ namespace ProjectStoreDotNet.Models
         [Column("base_salary", TypeName = "decimal(6,2)")]
         public decimal BaseSalary { get; set; }
 
-        public Department Department { get; set; }
         [ForeignKey("DepartmentId")]
         public int DepartmentId { get; set; }
 
