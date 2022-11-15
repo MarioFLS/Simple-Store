@@ -108,7 +108,7 @@ Lembre-se você precisar estar com o docker rodando ou com o SQLite rodando na s
  #### Exemplo
  
  O BackEnd está rodando localmente ele provalvemente irá rodar na `https://localhost:7053`
- Então use o seguinte caminho `http://localhost:7053/docs`
+ Então use o seguinte caminho `http://localhost:7053/docs` ou `https://localhost:7053/docs/index.html`
 
 
 ## Estou aqui para Ajudar!
