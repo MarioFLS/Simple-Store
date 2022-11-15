@@ -58,13 +58,21 @@ Você deve ver se o seu banco tem essas crêdenciais
 
 #### Comando para subir o Banco
 
+Você precisa ter o `dotnet ef`
+
+Para instalar globalmente use
+
+`dotnet tool install --global dotnet-ef`
+
+Link da documentação da Microsoft: https://learn.microsoft.com/pt-br/ef/core/get-started/overview/install
+
 ```C#
-# Usado no CLI do .NET
+# Usado o PowerShell
 
 dotnet ef database update
 ```
 
-# Usado no PowerShell
+# Usado o Sheel do Visual Studio
 ```PowerShell
 
 Update-Database
@@ -79,11 +87,17 @@ Update-Database
 Como dito antes, ele irá transpilar o código e iniciar o uso. Não esqueça se for sair dele use `CTRL + C` ou equivalente. Se não a porta ainda será ocupada.
 Você pode reiniciar ou derrubar o container, isso resolverá esse problema.
 
-#### Dentro do Container e com a aplicação iniciada, inicie o banco com o comando:
-`Update-Database`
+#### Dentro da pasta do projeto:
+Use o comando pra acessar de fato a aplicação:
+
+`cd ProjectStoreDotNet`
+
+em seguida atualize o banco de dados.
+
+`dotnet ef database update`
 E pronto! O Banco estará pronto para ser usado!
 
-Rodando os testes o banco também será iniciado!
+Lembre-se você precisar estar com o docker rodando ou com o SQLite rodando na sua maquina!
  
 
 ## DOCUMENTAÇÃO
