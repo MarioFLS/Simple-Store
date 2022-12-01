@@ -7,7 +7,7 @@ Um Projeto de Estudos
 
 ## Tecnologias Usadas
 
-> Desenvolvida utilizando: C#, .Net, Entity Framework Core, Docker, Docker-Compose, SQLite, JavaScript, CSS, Material UI, React.
+> Desenvolvida utilizando: C#, .Net, Entity Framework Core, Docker, Docker-Compose, SQLServer, JavaScript, CSS, Material UI, React.
 
 # Como Utilizar
 
